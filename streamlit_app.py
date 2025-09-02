@@ -11,9 +11,16 @@ Based on: https://github.com/kernc/backtesting.py
 
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go
-import plotly.express as px
-from plotly.subplots import make_subplots
+try:
+    import plotly.graph_objects as go
+    import plotly.express as px
+    from plotly.subplots import make_subplots
+    _plotly_available = True
+except Exception as _plotly_error:
+    _plotly_available = False
+    go = None
+    px = None
+    make_subplots = None
 import sys
 import os
 import numpy as np
@@ -89,7 +96,36 @@ selected_dataset = st.sidebar.selectbox(
     help="Choose the financial data to backtest on"
 )
 
-data = dataset_options[selected_dataset]
+@st.cache_data(show_spinner=False)
+def _get_dataset(name):
+    return dataset_options[name]
+
+@st.cache_data(show_spinner=False)
+def _compute_backtest_stats(dataset_key, fast_period, slow_period, commission_pct, starting_cash):
+    # Define a local Strategy class bound to parameters for caching correctness
+    class _SmaCross(Strategy):
+        def init(self):
+            price = self.data.Close
+            self.ma1 = self.I(SMA, price, fast_period)
+            self.ma2 = self.I(SMA, price, slow_period)
+        def next(self):
+            if crossover(self.ma1, self.ma2):
+                self.buy()
+            elif crossover(self.ma2, self.ma1):
+                self.sell()
+
+    dataset_df = dataset_options[dataset_key]
+    bt = Backtest(
+        dataset_df,
+        _SmaCross,
+        commission=commission_pct/100,
+        cash=starting_cash,
+        exclusive_orders=True,
+        finalize_trades=True,
+    )
+    return bt.run()
+
+data = _get_dataset(selected_dataset)
 
 # Strategy parameters
 st.sidebar.subheader("📊 Strategy Parameters")
@@ -150,17 +186,14 @@ with col2:
 if st.button("🚀 Run Backtest", type="primary", use_container_width=True):
     with st.spinner("Running backtest..."):
         try:
-            # Create and run backtest
-            bt = Backtest(
-                data, 
-                SmaCross, 
-                commission=commission/100,
-                cash=initial_cash,
-                exclusive_orders=True,
-                finalize_trades=True
+            # Create and run backtest (cached)
+            stats = _compute_backtest_stats(
+                selected_dataset,
+                fast_sma,
+                slow_sma,
+                commission,
+                initial_cash,
             )
-            
-            stats = bt.run()
             
             # Display results
             st.success("✅ Backtest completed successfully!")
@@ -218,6 +251,10 @@ if st.button("🚀 Run Backtest", type="primary", use_container_width=True):
             with tab2:
                 # Performance charts
                 st.subheader("📈 Performance Analysis")
+                if not _plotly_available:
+                    st.warning("Plotly is not available. Install dependencies from requirements_web.txt to see charts.")
+                
+                if _plotly_available:
                 
                 # Create performance comparison chart
                 fig = make_subplots(
@@ -269,6 +306,8 @@ if st.button("🚀 Run Backtest", type="primary", use_container_width=True):
             with tab3:
                 # Trade analysis
                 st.subheader("💰 Trade Analysis")
+                if not _plotly_available:
+                    st.warning("Plotly is not available. Install dependencies from requirements_web.txt to see charts.")
                 
                 trades = stats['_trades']
                 if len(trades) > 0:
@@ -278,26 +317,27 @@ if st.button("🚀 Run Backtest", type="primary", use_container_width=True):
                     with col1:
                         # Trade returns histogram
                         returns = trades['ReturnPct']
-                        fig = px.histogram(
-                            returns, 
-                            nbins=20,
-                            title="Trade Returns Distribution",
-                            labels={'value': 'Return (%)', 'count': 'Number of Trades'}
-                        )
-                        st.plotly_chart(fig, use_container_width=True)
+                        if _plotly_available:
+                            fig = px.histogram(
+                                returns, 
+                                nbins=20,
+                                title="Trade Returns Distribution",
+                                labels={'value': 'Return (%)', 'count': 'Number of Trades'}
+                            )
+                            st.plotly_chart(fig, use_container_width=True)
                     
                     with col2:
                         # Win/Loss pie chart
                         wins = (returns > 0).sum()
                         losses = (returns <= 0).sum()
-                        
-                        fig = px.pie(
-                            values=[wins, losses],
-                            names=['Winning Trades', 'Losing Trades'],
-                            title="Win/Loss Distribution",
-                            color_discrete_sequence=['green', 'red']
-                        )
-                        st.plotly_chart(fig, use_container_width=True)
+                        if _plotly_available:
+                            fig = px.pie(
+                                values=[wins, losses],
+                                names=['Winning Trades', 'Losing Trades'],
+                                title="Win/Loss Distribution",
+                                color_discrete_sequence=['green', 'red']
+                            )
+                            st.plotly_chart(fig, use_container_width=True)
                     
                     # Trade table
                     st.subheader("📋 Recent Trades")
