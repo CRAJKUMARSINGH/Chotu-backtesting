@@ -29,12 +29,17 @@ You now have a **complete backtesting web application** with multiple ways to ru
 cd C:\Users\Rajkumar\backtesting
 ```
 
-**Step 2:** Run the web app launcher
+**Step 2:** Install dependencies
+```bash
+pip install -r requirements_web.txt
+```
+
+**Step 3:** Run the web app launcher
 ```bash
 python launch_web_app.py
 ```
 
-**Step 3:** Browser will open automatically to `http://localhost:8501`
+**Step 4:** Browser will open automatically to `http://localhost:8501`
 
 **What you'll see:**
 - 📊 Interactive web interface
@@ -147,6 +152,13 @@ streamlit run streamlit_app.py
 ```bash
 # Install requirements
 pip install -r requirements_web.txt
+```
+If you're on a system-managed Python (PEP 668) and cannot install globally, create a virtual environment:
+```bash
+python -m venv .venv
+. .venv/bin/activate  # On Windows: .venv\\Scripts\\activate
+pip install -r requirements_web.txt
+python launch_web_app.py
 ```
 
 ### **If port 8501 is busy:**

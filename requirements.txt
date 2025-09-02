@@ -1,2 +1,2 @@
-# To run example notebooks, install required and test dependencies
-.[test]
+# Primary requirements for running the Streamlit web app
+-r requirements_web.txt
