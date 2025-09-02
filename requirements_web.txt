@@ -2,15 +2,16 @@
 # These are the minimum required packages for the web interface
 
 # Core backtesting library dependencies
-numpy>=1.17.0
-pandas>=0.25.0
+numpy>=1.26.0
+pandas>=2.0.0
 bokeh>=3.0.0
 
 # Web framework
 streamlit>=1.28.0
 
 # Visualization libraries
-plotly>=5.0.0
+plotly>=5.17.0
 
 # Additional utilities
 python-dateutil>=2.8.0
+psutil>=5.9.0

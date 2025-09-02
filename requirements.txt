@@ -1,2 +1,5 @@
+# Base requirements for all environments
+-r requirements_web.txt
+
 # To run example notebooks, install required and test dependencies
 .[test]
