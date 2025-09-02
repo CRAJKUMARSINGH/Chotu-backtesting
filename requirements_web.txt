@@ -1,0 +1,16 @@
+# Web deployment requirements for Backtesting.py Streamlit app
+# These are the minimum required packages for the web interface
+
+# Core backtesting library dependencies
+numpy>=1.17.0
+pandas>=0.25.0
+bokeh>=3.0.0
+
+# Web framework
+streamlit>=1.28.0
+
+# Visualization libraries
+plotly>=5.0.0
+
+# Additional utilities
+python-dateutil>=2.8.0

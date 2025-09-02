@@ -1,0 +1,28 @@
+🚀 ONE-CLICK BACKTESTING.PY DEMO - QUICK START GUIDE
+====================================================
+
+🎯 CHOOSE YOUR METHOD (Pick any one):
+
+1️⃣ EASIEST (Windows): Double-click "run_backtesting_demo.bat"
+2️⃣ RECOMMENDED (Windows): Right-click "run_backtesting_demo.ps1" → "Run with PowerShell"
+3️⃣ UNIVERSAL: Run "python launch_demo.py"
+4️⃣ DIRECT: Run "python demo_backtesting.py"
+
+📊 WHAT YOU'LL SEE:
+• Complete backtesting results with Google stock data (2004-2013)
+• SMA Crossover strategy performance
+• Trading statistics (returns, Sharpe ratio, drawdown, etc.)
+• Interactive charts (if plotting works)
+
+✅ REQUIREMENTS:
+• Python 3.9+ (already installed)
+• Internet connection (for charts)
+
+🎉 THAT'S IT! Just run any of the above methods and enjoy the demo!
+
+📚 LEARN MORE:
+• Official docs: https://kernc.github.io/backtesting.py/
+• GitHub: https://github.com/kernc/backtesting.py
+• Examples: Check the doc/examples/ folder
+
+Happy Backtesting! 📈💰
