@@ -3,3 +3,6 @@
 
 # To run example notebooks, install required and test dependencies
 .[test]
+
+# Ensure Plotly is explicitly installed in environments that ignore -r includes
+plotly>=5.17.0
