@@ -6,3 +6,4 @@
 
 # Ensure Plotly is explicitly installed in environments that ignore -r includes
 plotly>=5.17.0
+streamlit>=1.28.0
