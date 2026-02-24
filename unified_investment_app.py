@@ -1367,6 +1367,700 @@ elif module == "📊 Advanced: Portfolio Optimization":
                 st.error(f"Error: {str(e)}")
 
 # Footer
+# Module 10: User Manual
+elif module == "📖 User Manual":
+    st.header("📖 Complete User Manual")
+    
+    # Table of Contents
+    st.markdown("""
+    ## 📑 Table of Contents
+    
+    1. [Getting Started](#getting-started)
+    2. [Module Guide](#module-guide)
+    3. [Features Overview](#features-overview)
+    4. [Tips & Best Practices](#tips-best-practices)
+    5. [Troubleshooting](#troubleshooting)
+    6. [FAQ](#faq)
+    """)
+    
+    # Getting Started
+    st.markdown("---")
+    st.subheader("🚀 Getting Started")
+    
+    with st.expander("Installation", expanded=False):
+        st.markdown("""
+        ### Installation Steps
+        
+        1. **Install Dependencies:**
+        ```bash
+        pip install -r requirements_unified.txt
+        ```
+        
+        2. **Launch the App:**
+        ```bash
+        python launch_unified_app.py
+        ```
+        
+        3. **Access in Browser:**
+        - Local: http://localhost:8501
+        - The app opens automatically
+        
+        ### System Requirements
+        - Python 3.8 or higher
+        - 4GB RAM minimum
+        - Internet connection (for market data)
+        - Modern web browser
+        """)
+    
+    with st.expander("First Steps", expanded=False):
+        st.markdown("""
+        ### Your First 30 Minutes
+        
+        **Minutes 1-10: Learn Basics**
+        1. Click "📚 Basics" in sidebar
+        2. Read "What is a Stock?"
+        3. Try the interactive example
+        4. Complete the lesson
+        
+        **Minutes 11-20: Analyze a Stock**
+        1. Click "📊 Market Analysis"
+        2. Enter "AAPL" (Apple)
+        3. Click "Analyze Stock"
+        4. Explore the charts
+        
+        **Minutes 21-30: Build a Strategy**
+        1. Click "🤖 Strategy Builder"
+        2. Keep default settings
+        3. Click "Test Strategy"
+        4. Review the results
+        """)
+    
+    # Module Guide
+    st.markdown("---")
+    st.subheader("📚 Module Guide")
+    
+    modules_info = {
+        "🏠 Home": {
+            "Purpose": "Overview and navigation hub",
+            "Features": ["Market overview", "Quick stats", "Module previews"],
+            "Time": "2 minutes",
+            "Difficulty": "Easy"
+        },
+        "📚 Basics": {
+            "Purpose": "Learn investment fundamentals",
+            "Features": ["6 interactive lessons", "Visual examples", "Concept explanations"],
+            "Time": "15 minutes",
+            "Difficulty": "Easy"
+        },
+        "📊 Market Analysis": {
+            "Purpose": "Analyze real stocks",
+            "Features": ["Real-time data", "Technical indicators", "Charts", "Volume analysis"],
+            "Time": "10 minutes per stock",
+            "Difficulty": "Medium"
+        },
+        "🤖 Strategy Builder": {
+            "Purpose": "Create trading strategies",
+            "Features": ["SMA Crossover", "Backtesting", "Performance comparison", "Visual signals"],
+            "Time": "15 minutes",
+            "Difficulty": "Medium"
+        },
+        "💼 Portfolio Simulator": {
+            "Purpose": "Practice virtual trading",
+            "Features": ["$100,000 virtual money", "Buy/sell execution", "Portfolio tracking", "Trade history"],
+            "Time": "20 minutes",
+            "Difficulty": "Medium"
+        },
+        "📈 Backtest Lab": {
+            "Purpose": "Compare multiple strategies",
+            "Features": ["5 strategies", "Commission/slippage", "Performance metrics", "Risk analysis"],
+            "Time": "15 minutes",
+            "Difficulty": "Hard"
+        },
+        "🎯 Quiz & Practice": {
+            "Purpose": "Test your knowledge",
+            "Features": ["Multiple topics", "Instant scoring", "Learning feedback"],
+            "Time": "10 minutes",
+            "Difficulty": "Easy"
+        },
+        "🔬 Walk-Forward": {
+            "Purpose": "Test strategy robustness",
+            "Features": ["Training/testing windows", "Parameter optimization", "Out-of-sample testing"],
+            "Time": "15 minutes",
+            "Difficulty": "Hard"
+        },
+        "📊 Portfolio Optimization": {
+            "Purpose": "Build optimal portfolios",
+            "Features": ["Efficient Frontier", "Sharpe ratio optimization", "Correlation analysis"],
+            "Time": "15 minutes",
+            "Difficulty": "Hard"
+        }
+    }
+    
+    for module_name, info in modules_info.items():
+        with st.expander(f"{module_name} - {info['Purpose']}", expanded=False):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown(f"**Time Required:** {info['Time']}")
+                st.markdown(f"**Difficulty:** {info['Difficulty']}")
+            with col2:
+                st.markdown("**Features:**")
+                for feature in info['Features']:
+                    st.markdown(f"- {feature}")
+    
+    # Features Overview
+    st.markdown("---")
+    st.subheader("✨ Features Overview")
+    
+    with st.expander("Real Market Data", expanded=False):
+        st.markdown("""
+        ### 📊 Live Data from Yahoo Finance
+        
+        - **Real-time prices** for any stock
+        - **Historical data** up to 5 years
+        - **Company information** (market cap, P/E ratio, etc.)
+        - **Technical indicators** (SMA, Bollinger Bands, RSI, MACD)
+        - **Volume analysis**
+        
+        **Supported Tickers:**
+        - US Stocks: AAPL, MSFT, GOOGL, TSLA, etc.
+        - ETFs: SPY, QQQ, IWM, etc.
+        - Indices: ^GSPC (S&P 500), ^DJI (Dow Jones)
+        """)
+    
+    with st.expander("Virtual Trading", expanded=False):
+        st.markdown("""
+        ### 💼 Risk-Free Practice
+        
+        - **$100,000 starting capital** (virtual money)
+        - **Real market prices** for accurate simulation
+        - **Buy and sell** any stock
+        - **Portfolio tracking** in real-time
+        - **Trade history** log
+        - **Profit/loss** calculation
+        
+        **How to Trade:**
+        1. Enter stock ticker
+        2. Choose Buy or Sell
+        3. Enter number of shares
+        4. Click "Execute Trade"
+        5. View updated portfolio
+        """)
+    
+    with st.expander("Strategy Building", expanded=False):
+        st.markdown("""
+        ### 🤖 Create & Test Strategies
+        
+        **Available Strategies:**
+        1. **SMA Crossover** - Moving average signals
+        2. **RSI Mean Reversion** - Overbought/oversold
+        3. **Bollinger Bands** - Volatility breakouts
+        4. **MACD** - Momentum indicator
+        5. **Buy & Hold** - Baseline comparison
+        
+        **Features:**
+        - Adjustable parameters
+        - Visual buy/sell signals
+        - Performance vs Buy & Hold
+        - Commission & slippage modeling
+        - Risk-adjusted metrics
+        """)
+    
+    with st.expander("Advanced Features", expanded=False):
+        st.markdown("""
+        ### 🔬 Professional Tools
+        
+        **Walk-Forward Optimization:**
+        - Train on historical data
+        - Test on future data
+        - Rolling window analysis
+        - Robustness testing
+        
+        **Portfolio Optimization:**
+        - Modern Portfolio Theory
+        - Efficient Frontier
+        - Maximum Sharpe Ratio
+        - Minimum Volatility
+        - Correlation analysis
+        - Optimal asset allocation
+        """)
+    
+    # Tips & Best Practices
+    st.markdown("---")
+    st.subheader("💡 Tips & Best Practices")
+    
+    with st.expander("Learning Path", expanded=False):
+        st.markdown("""
+        ### 📚 Recommended Learning Path
+        
+        **Week 1: Foundations**
+        - [ ] Complete all Basics lessons
+        - [ ] Analyze 5 different stocks
+        - [ ] Take Stock Basics quiz
+        - [ ] Understand key concepts
+        
+        **Week 2: Technical Analysis**
+        - [ ] Learn chart reading
+        - [ ] Understand indicators
+        - [ ] Build first strategy
+        - [ ] Run backtests
+        
+        **Week 3: Practice Trading**
+        - [ ] Start virtual portfolio
+        - [ ] Make 10 trades
+        - [ ] Track performance
+        - [ ] Learn from results
+        
+        **Week 4: Advanced Strategies**
+        - [ ] Compare multiple strategies
+        - [ ] Optimize parameters
+        - [ ] Analyze risk metrics
+        - [ ] Master concepts
+        """)
+    
+    with st.expander("Trading Tips", expanded=False):
+        st.markdown("""
+        ### 🎯 Key Principles
+        
+        1. **Start Simple**
+           - Master basics before advanced features
+           - One strategy at a time
+           - Small positions initially
+        
+        2. **Practice Daily**
+           - 15-30 minutes per day
+           - Consistency is key
+           - Review your trades
+        
+        3. **Diversify**
+           - Don't put all eggs in one basket
+           - Multiple stocks
+           - Different sectors
+        
+        4. **Manage Risk**
+           - Set stop losses
+           - Position sizing
+           - Never risk more than you can afford
+        
+        5. **Learn Continuously**
+           - Read lessons
+           - Take quizzes
+           - Experiment safely
+           - Ask questions
+        
+        6. **Be Patient**
+           - Good investing takes time
+           - Don't chase quick profits
+           - Stick to your strategy
+        
+        7. **Track Performance**
+           - Review your trades
+           - Learn from mistakes
+           - Celebrate successes
+           - Adjust strategies
+        """)
+    
+    with st.expander("Common Mistakes to Avoid", expanded=False):
+        st.markdown("""
+        ### ⚠️ What NOT to Do
+        
+        1. **Don't overtrade**
+           - Too many trades = high costs
+           - Quality over quantity
+        
+        2. **Don't ignore risk**
+           - Always consider downside
+           - Use stop losses
+        
+        3. **Don't chase performance**
+           - Past returns ≠ future returns
+           - Stick to your plan
+        
+        4. **Don't invest without research**
+           - Always analyze first
+           - Understand what you buy
+        
+        5. **Don't let emotions decide**
+           - Fear and greed are bad advisors
+           - Follow your strategy
+        
+        6. **Don't skip the basics**
+           - Foundation is crucial
+           - Master fundamentals first
+        
+        7. **Don't use real money yet**
+           - Practice with virtual money
+           - Build confidence first
+           - Learn from mistakes safely
+        """)
+    
+    # Troubleshooting
+    st.markdown("---")
+    st.subheader("🔧 Troubleshooting")
+    
+    with st.expander("Common Issues", expanded=False):
+        st.markdown("""
+        ### Problem: App won't start
+        **Solution:**
+        ```bash
+        pip install --upgrade streamlit
+        python launch_unified_app.py
+        ```
+        
+        ### Problem: Dependencies missing
+        **Solution:**
+        ```bash
+        pip install -r requirements_unified.txt
+        ```
+        
+        ### Problem: Port already in use
+        **Solution:**
+        ```bash
+        streamlit run unified_investment_app.py --server.port 8502
+        ```
+        
+        ### Problem: Data not loading
+        **Solution:**
+        - Check internet connection
+        - Try different stock ticker
+        - Refresh the page
+        - Wait a moment and try again
+        
+        ### Problem: Charts not displaying
+        **Solution:**
+        - Update your browser
+        - Clear browser cache
+        - Try different browser
+        - Check JavaScript is enabled
+        
+        ### Problem: Slow performance
+        **Solution:**
+        - Close other browser tabs
+        - Restart the app
+        - Use shorter time periods
+        - Reduce number of strategies
+        """)
+    
+    # FAQ
+    st.markdown("---")
+    st.subheader("❓ Frequently Asked Questions")
+    
+    faqs = {
+        "Is this real money?": "No! All trading is with virtual money ($100,000). There's zero risk.",
+        "Can I lose real money?": "No! This is a simulation for learning. No real money is involved.",
+        "What stocks can I analyze?": "Any stock with a valid ticker symbol (AAPL, MSFT, GOOGL, TSLA, etc.).",
+        "How do I save my progress?": "Portfolio and trades save in your session. They reset when you refresh the page.",
+        "Can I use this for real trading?": "This is for education only. Always consult professionals before real trading.",
+        "Is the data real?": "Yes! We use real market data from Yahoo Finance.",
+        "How accurate are the strategies?": "Backtests use historical data. Past performance doesn't guarantee future results.",
+        "Can I create my own strategies?": "Yes! Use the Strategy Builder to create and test custom strategies.",
+        "What's the best strategy?": "There's no 'best' strategy. It depends on market conditions and your goals.",
+        "How long to learn?": "Basics: 1 week. Intermediate: 1 month. Advanced: 2-3 months with practice.",
+        "Do I need coding knowledge?": "No! The app is designed for beginners with no coding required.",
+        "Can I deploy this online?": "Yes! Deploy to Streamlit Cloud, Vercel, or Heroku.",
+        "Is this suitable for kids?": "Yes! Check FOR_YOUR_SON.md for a kid-friendly guide.",
+        "What if I make mistakes?": "Perfect! Mistakes are how you learn. No real money is at risk.",
+        "Can I share my portfolio?": "Currently, portfolios are session-based. Export features coming soon!",
+        "How often is data updated?": "Market data updates in real-time when you analyze stocks.",
+        "What's the difference between modules?": "Each module teaches different aspects. Start with Basics and progress.",
+        "Can I test multiple stocks?": "Yes! Portfolio Optimization module supports multiple stocks.",
+        "Are there video tutorials?": "Yes! Check the Video Tutorials module for complete guides.",
+        "Where can I get help?": "Check documentation files: START_HERE.md, QUICK_START_UNIFIED.md, etc."
+    }
+    
+    for question, answer in faqs.items():
+        with st.expander(f"Q: {question}", expanded=False):
+            st.markdown(f"**A:** {answer}")
+    
+    # Quick Reference
+    st.markdown("---")
+    st.subheader("📋 Quick Reference")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        ### 🚀 Quick Commands
+        
+        **Launch App:**
+        ```bash
+        python launch_unified_app.py
+        ```
+        
+        **Install Dependencies:**
+        ```bash
+        pip install -r requirements_unified.txt
+        ```
+        
+        **Direct Streamlit:**
+        ```bash
+        streamlit run unified_investment_app.py
+        ```
+        """)
+    
+    with col2:
+        st.markdown("""
+        ### 📖 Documentation Files
+        
+        - **START_HERE.md** - Entry point
+        - **FOR_YOUR_SON.md** - Kid-friendly
+        - **QUICK_START_UNIFIED.md** - Quick ref
+        - **UNIFIED_APP_GUIDE.md** - Complete guide
+        - **VIDEO_TUTORIAL_SCRIPT.md** - Video guide
+        """)
+    
+    # Contact & Support
+    st.markdown("---")
+    st.subheader("📞 Contact & Support")
+    
+    st.markdown("""
+    ### Need More Help?
+    
+    1. **Check Documentation** - All guides included with app
+    2. **Review Examples** - Try the sample strategies
+    3. **Watch Videos** - See Video Tutorials module
+    4. **Experiment** - Safe to try anything with virtual money
+    
+    ### Remember
+    
+    - This is for **education only**
+    - **Not financial advice**
+    - Always **consult professionals** before real trading
+    - **Practice safely** with virtual money
+    
+    ### Happy Learning! 🎓📈
+    """)
+
+# Module 11: Video Tutorials
+elif module == "🎥 Video Tutorials":
+    st.header("🎥 Video Tutorial Guide")
+    
+    st.markdown("""
+    ## Complete Video Tutorial Series
+    
+    Professional video tutorials to help you master the platform.
+    """)
+    
+    # Video Series Overview
+    st.subheader("📺 Video Series (8 Videos, ~57 minutes total)")
+    
+    videos = [
+        {
+            "title": "Video 1: Introduction & Setup",
+            "duration": "5 minutes",
+            "topics": ["Installation", "First launch", "Interface overview"],
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Video 2: Learning the Basics",
+            "duration": "8 minutes",
+            "topics": ["What is a stock?", "Risk & return", "Taking quizzes"],
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Video 3: Market Analysis",
+            "duration": "7 minutes",
+            "topics": ["Analyzing stocks", "Reading charts", "Technical indicators"],
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Video 4: Building Your First Strategy",
+            "duration": "10 minutes",
+            "topics": ["Strategy basics", "Setting parameters", "Analyzing results"],
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Video 5: Virtual Trading",
+            "duration": "8 minutes",
+            "topics": ["Starting portfolio", "Placing trades", "Managing positions"],
+            "difficulty": "Medium"
+        },
+        {
+            "title": "Video 6: Advanced Features",
+            "duration": "12 minutes",
+            "topics": ["Backtest Lab", "Walk-Forward", "Portfolio Optimization"],
+            "difficulty": "Hard"
+        },
+        {
+            "title": "Video 7: Tips & Best Practices",
+            "duration": "5 minutes",
+            "topics": ["Learning path", "Best practices", "Getting help"],
+            "difficulty": "Easy"
+        },
+        {
+            "title": "Video 8: Conclusion",
+            "duration": "2 minutes",
+            "topics": ["Recap", "Next steps", "Resources"],
+            "difficulty": "Easy"
+        }
+    ]
+    
+    for i, video in enumerate(videos, 1):
+        with st.expander(f"{video['title']} ({video['duration']})", expanded=False):
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                st.markdown(f"**Duration:** {video['duration']}")
+                st.markdown(f"**Difficulty:** {video['difficulty']}")
+                st.markdown("**Topics Covered:**")
+                for topic in video['topics']:
+                    st.markdown(f"- {topic}")
+            
+            with col2:
+                st.info(f"📹 Video {i} of 8")
+                st.markdown("*Video coming soon!*")
+    
+    # Quick Start Video
+    st.markdown("---")
+    st.subheader("⚡ Quick Start Video (10 minutes)")
+    
+    st.markdown("""
+    For users who want a faster introduction:
+    
+    - **Installation** (1 min)
+    - **Interface overview** (2 min)
+    - **First stock analysis** (2 min)
+    - **First strategy** (3 min)
+    - **First trade** (2 min)
+    
+    *Perfect for getting started quickly!*
+    """)
+    
+    # Video Production Info
+    st.markdown("---")
+    st.subheader("🎬 Video Production Information")
+    
+    with st.expander("For Content Creators", expanded=False):
+        st.markdown("""
+        ### Creating Your Own Tutorials
+        
+        Want to create video tutorials? Here's what you need:
+        
+        **Equipment:**
+        - Screen recording software (OBS Studio, Camtasia)
+        - Good microphone for narration
+        - Video editing software (DaVinci Resolve, Adobe Premiere)
+        
+        **Recording Tips:**
+        - Record in 1080p or 4K
+        - Use 60 FPS for smooth animations
+        - Record audio separately
+        - Use cursor highlighting
+        - Add zoom effects for details
+        
+        **Complete Script:**
+        Check `VIDEO_TUTORIAL_SCRIPT.md` for the complete narration script,
+        scene descriptions, and production notes.
+        
+        **Publishing:**
+        - Upload to YouTube
+        - Create playlist
+        - Add timestamps
+        - Include links to documentation
+        - Enable captions
+        """)
+    
+    # Interactive Demo
+    st.markdown("---")
+    st.subheader("🎮 Interactive Demo")
+    
+    st.markdown("""
+    ### Try It Yourself!
+    
+    The best way to learn is by doing. Here's a quick interactive demo:
+    """)
+    
+    demo_step = st.selectbox(
+        "Choose a demo:",
+        ["Select a demo...", "Analyze a Stock", "Build a Strategy", "Place a Trade"]
+    )
+    
+    if demo_step == "Analyze a Stock":
+        st.markdown("""
+        ### 📊 Stock Analysis Demo
+        
+        **Step 1:** Go to "📊 Market Analysis" in the sidebar
+        
+        **Step 2:** Enter a stock ticker (try "AAPL")
+        
+        **Step 3:** Select time period (try "1y")
+        
+        **Step 4:** Click "Analyze Stock"
+        
+        **Step 5:** Explore the charts and metrics!
+        
+        *Try it now by clicking "📊 Market Analysis" in the sidebar!*
+        """)
+    
+    elif demo_step == "Build a Strategy":
+        st.markdown("""
+        ### 🤖 Strategy Building Demo
+        
+        **Step 1:** Go to "🤖 Strategy Builder" in the sidebar
+        
+        **Step 2:** Enter a stock ticker (try "MSFT")
+        
+        **Step 3:** Adjust SMA periods (try 10 and 50)
+        
+        **Step 4:** Click "Test Strategy"
+        
+        **Step 5:** Review performance vs Buy & Hold!
+        
+        *Try it now by clicking "🤖 Strategy Builder" in the sidebar!*
+        """)
+    
+    elif demo_step == "Place a Trade":
+        st.markdown("""
+        ### 💼 Virtual Trading Demo
+        
+        **Step 1:** Go to "💼 Portfolio Simulator" in the sidebar
+        
+        **Step 2:** Click the "Trade" tab
+        
+        **Step 3:** Enter a stock ticker (try "GOOGL")
+        
+        **Step 4:** Select "Buy" and enter 5 shares
+        
+        **Step 5:** Click "Execute Trade"
+        
+        **Step 6:** View your portfolio in the "Portfolio" tab!
+        
+        *Try it now by clicking "💼 Portfolio Simulator" in the sidebar!*
+        """)
+    
+    # Additional Resources
+    st.markdown("---")
+    st.subheader("📚 Additional Resources")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        ### 📖 Documentation
+        
+        - START_HERE.md
+        - QUICK_START_UNIFIED.md
+        - UNIFIED_APP_GUIDE.md
+        - FOR_YOUR_SON.md
+        - VIDEO_TUTORIAL_SCRIPT.md
+        """)
+    
+    with col2:
+        st.markdown("""
+        ### 🔗 External Resources
+        
+        - Investopedia.com
+        - Yahoo Finance
+        - TradingView
+        - Khan Academy (Finance)
+        - Coursera (Investment courses)
+        """)
+    
+    st.success("🎥 Video tutorials help you learn faster! Check back for updates.")
+
+# Keep the original footer
+# (Footer code remains at the very end)
+
+# Footer
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 2rem;">

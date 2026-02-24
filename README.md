@@ -1,421 +1,380 @@
-# 🎓 Investment Learning Platform - For My Son
+# 🎓 Unified Investment Learning Platform
 
-**Learn Stock Investment Through Interactive Simulations**
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> Dad built this for you to learn about investing safely with virtual money!
+> **An all-in-one educational platform for learning stock investment through interactive simulations**
 
----
-
-## 🎯 What Is This?
-
-An educational app that teaches you about:
-- 📈 Stock market basics
-- 📊 Reading charts
-- 🤖 Building trading strategies
-- 💼 Managing portfolios
-- 📉 Understanding risk
-
-**100% Safe:** Uses $100,000 virtual money - no real money involved!
+Combining the power of **FinRL**, **Backtesting.py**, **Lumibot**, and **VectorBT** into one comprehensive learning experience.
 
 ---
 
-## 🚀 How to Start (3 Steps)
+## 🌟 Features
 
-### Step 1: Install Python
-If you don't have Python, download from: https://www.python.org/downloads/
+### 📚 11 Interactive Learning Modules
 
-### Step 2: Download This Project
+1. **🏠 Home** - Market overview and navigation
+2. **📖 User Manual** - Complete interactive guide
+3. **📚 Basics** - 6 interactive lessons on fundamentals
+4. **📊 Market Analysis** - Real-time stock data and charts
+5. **🤖 Strategy Builder** - Create and test trading strategies
+6. **💼 Portfolio Simulator** - Virtual trading with $100,000
+7. **📈 Backtest Lab** - Compare 5 different strategies
+8. **🎯 Quiz & Practice** - Test your knowledge
+9. **🔬 Walk-Forward Optimization** - Advanced strategy testing
+10. **📊 Portfolio Optimization** - Build optimal portfolios
+11. **🎥 Video Tutorials** - Complete video guide
+
+### ✨ Key Capabilities
+
+- ✅ **Real Market Data** - Live data from Yahoo Finance
+- ✅ **Virtual Trading** - Practice with $100,000 virtual money
+- ✅ **Interactive Charts** - Plotly visualizations
+- ✅ **Technical Indicators** - SMA, Bollinger Bands, RSI, MACD
+- ✅ **Strategy Backtesting** - Test strategies on historical data
+- ✅ **Portfolio Optimization** - Modern Portfolio Theory
+- ✅ **Risk-Free Learning** - No real money involved
+- ✅ **Complete Documentation** - In-app user manual and video guides
+
+---
+
+## 🚀 Quick Start
+
+### Option 1: One-Click Launch (Windows)
+
 ```bash
-# Clone or download this repository
-git clone [repository-url]
-cd [project-folder]
+# Double-click
+RUN_UNIFIED_APP.bat
 ```
 
-### Step 3: Run the App
+### Option 2: Python Launcher
+
 ```bash
-# Install dependencies (first time only)
+# Install dependencies
 pip install -r requirements_unified.txt
 
-# Launch the app
+# Launch app
 python launch_unified_app.py
 ```
 
-**The app will open in your browser automatically!**
+### Option 3: Direct Streamlit
 
----
-
-## 📚 What You'll Learn (9 Modules)
-
-### 1. 🏠 Home
-- See real stock prices
-- Market overview
-- Quick navigation
-
-### 2. 📖 Basics (Start Here!)
-**6 Interactive Lessons:**
-- What is a Stock?
-- How Markets Work
-- Risk vs Return
-- Diversification
-- Technical Analysis
-- Fundamental Analysis
-
-**Time:** 15-20 minutes
-
-### 3. 📊 Market Analysis
-**Analyze Real Stocks:**
-- Enter any ticker (AAPL, MSFT, GOOGL, TSLA)
-- See live prices
-- View candlestick charts
-- Technical indicators (SMA, Bollinger Bands)
-- Volume analysis
-
-**Try:** Analyze Apple (AAPL) first!
-
-### 4. 🤖 Strategy Builder
-**Build Your Own Trading Strategy:**
-- Create buy/sell rules
-- Test on real data
-- See if it works
-- Compare to Buy & Hold
-
-**Example:** When fast average crosses slow average → Buy!
-
-### 5. 💼 Portfolio Simulator
-**Practice Trading:**
-- Start with $100,000 virtual money
-- Buy and sell stocks
-- Track your profit/loss
-- Learn from mistakes
-
-**No Risk:** It's all fake money!
-
-### 6. 📈 Backtest Lab
-**Compare 5 Strategies:**
-- Buy & Hold
-- SMA Crossover
-- RSI Mean Reversion
-- Bollinger Bands
-- MACD
-
-**See which works best!**
-
-### 7. 🎯 Quiz & Practice
-**Test Your Knowledge:**
-- Stock Basics Quiz
-- Technical Analysis Quiz
-- Risk Management Quiz
-- Portfolio Theory Quiz
-
-**Get instant feedback!**
-
-### 8. 🔬 Walk-Forward Optimization (Advanced)
-**Real-World Testing:**
-- Train on past data
-- Test on future data
-- See if strategy is robust
-- Avoid overfitting
-
-**For:** After you master basics
-
-### 9. 📊 Portfolio Optimization (Advanced)
-**Build Optimal Portfolios:**
-- Multiple stocks
-- Efficient Frontier
-- Risk/Return balance
-- Correlation analysis
-
-**For:** When ready for advanced concepts
-
----
-
-## 🎮 Your First Session (30 Minutes)
-
-### Minutes 1-5: Launch
 ```bash
-python launch_unified_app.py
-```
-Browser opens to: http://localhost:8501
-
-### Minutes 6-15: Learn Basics
-1. Click "📖 Basics" in sidebar
-2. Read "What is a Stock?"
-3. Try the interactive example
-4. Understand the concepts
-
-### Minutes 16-25: Analyze a Stock
-1. Click "📊 Market Analysis"
-2. Enter "AAPL" (Apple)
-3. Click "Analyze Stock"
-4. Explore the charts
-5. See the indicators
-
-### Minutes 26-30: Take Quiz
-1. Click "🎯 Quiz & Practice"
-2. Take "Stock Basics" quiz
-3. See your score
-4. Review what you learned
-
-**Congratulations! You've started your investment learning journey! 🎉**
-
----
-
-## 💡 Learning Path (4 Weeks)
-
-### Week 1: Foundations
-- [ ] Complete all Basics lessons
-- [ ] Analyze 5 different stocks
-- [ ] Take Stock Basics quiz
-- [ ] Score 100% on quiz
-
-### Week 2: Technical Analysis
-- [ ] Learn to read charts
-- [ ] Understand moving averages
-- [ ] Build your first strategy
-- [ ] Run your first backtest
-
-### Week 3: Practice Trading
-- [ ] Start virtual portfolio
-- [ ] Make 10 trades
-- [ ] Track your performance
-- [ ] Learn from mistakes
-
-### Week 4: Advanced Concepts
-- [ ] Compare multiple strategies
-- [ ] Try walk-forward optimization
-- [ ] Build a multi-stock portfolio
-- [ ] Master all quizzes
-
----
-
-## 🎯 Quick Commands
-
-### Run the App
-```bash
-# Windows
-Double-click: RUN_UNIFIED_APP.bat
-
-# Mac/Linux
-python launch_unified_app.py
-
-# Direct
 streamlit run unified_investment_app.py
 ```
 
-### Stop the App
-Press `Ctrl + C` in terminal
+**Access at:** http://localhost:8501
 
-### Update Dependencies
+---
+
+## 📦 Installation
+
+### Requirements
+
+- Python 3.8 or higher
+- 4GB RAM minimum
+- Internet connection (for market data)
+- Modern web browser
+
+### Install Dependencies
+
 ```bash
-pip install -r requirements_unified.txt --upgrade
-```
-
----
-
-## 📱 Access from Anywhere
-
-### On Your Computer
-http://localhost:8501
-
-### On Your Phone/Tablet (Same Network)
-http://[your-computer-ip]:8501
-
-**Find your IP:**
-- Windows: `ipconfig`
-- Mac/Linux: `ifconfig`
-
----
-
-## 🤔 Common Questions
-
-### Q: Is this real money?
-**A:** No! It's 100% virtual. You start with $100,000 fake money.
-
-### Q: Can I lose real money?
-**A:** No! Zero risk. It's all for learning.
-
-### Q: What stocks can I analyze?
-**A:** Any stock! Try: AAPL, MSFT, GOOGL, TSLA, AMZN, etc.
-
-### Q: How do I know if my strategy is good?
-**A:** Test it in Backtest Lab and compare to Buy & Hold.
-
-### Q: What if I make mistakes?
-**A:** Perfect! Mistakes are how you learn. No real money at risk.
-
-### Q: Can I reset my portfolio?
-**A:** Yes! Just refresh the page.
-
-### Q: How long to learn everything?
-**A:** Basics in 1 day, mastery in 1 month with daily practice.
-
----
-
-## 🎓 Important Lessons
-
-### Lesson 1: Patience
-Good investing takes time. Don't expect to get rich overnight!
-
-### Lesson 2: Research
-Always research before buying. Know what you're investing in!
-
-### Lesson 3: Diversification
-Don't put all your eggs in one basket. Spread your investments!
-
-### Lesson 4: Risk Management
-Only invest what you can afford to lose. Protect your capital!
-
-### Lesson 5: Keep Learning
-The market is always changing. Never stop learning!
-
----
-
-## 🌟 Why Dad Built This
-
-I wanted you to learn about investing in a safe, fun way:
-
-✅ **Safe:** No real money risk  
-✅ **Interactive:** Learn by doing  
-✅ **Real Data:** Actual market information  
-✅ **Comprehensive:** From basics to advanced  
-✅ **Fun:** Engaging and visual  
-
-**Remember:** This is education, not financial advice. Always consult professionals before investing real money.
-
----
-
-## 🔧 Troubleshooting
-
-### App Won't Start
-```bash
-# Reinstall dependencies
 pip install -r requirements_unified.txt
-
-# Try again
-python launch_unified_app.py
 ```
 
-### Port Already in Use
+### Dependencies Include
+
+- streamlit>=1.28.0
+- pandas>=2.0.0
+- numpy>=1.24.0
+- plotly>=5.17.0
+- yfinance>=0.2.28
+- scipy>=1.11.0
+- scikit-learn>=1.3.0
+
+---
+
+## 🌐 Deploy to Streamlit Cloud
+
+### Step 1: Push to GitHub
+
 ```bash
-# Use different port
-streamlit run unified_investment_app.py --server.port 8502
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
 ```
 
-### Data Not Loading
-- Check internet connection
-- Try different stock ticker
-- Refresh the page
+### Step 2: Deploy
 
-### Need Help?
-1. Read START_HERE.md
-2. Check FOR_YOUR_SON.md
-3. Contact Dad! 😊
+1. Go to [share.streamlit.io](https://share.streamlit.io)
+2. Sign in with GitHub
+3. Click "New app"
+4. Select your repository
+5. Set main file: `unified_investment_app.py`
+6. Click "Deploy!"
 
----
+**Your app will be live in 2-3 minutes!**
 
-## 📚 Additional Resources
-
-### In This Project
-- **START_HERE.md** - Complete technical guide
-- **FOR_YOUR_SON.md** - Detailed learning guide
-- **QUICK_REFERENCE.txt** - Command cheat sheet
-
-### Recommended Reading
-- "A Random Walk Down Wall Street"
-- "The Intelligent Investor"
-- "Common Stocks and Uncommon Profits"
-
-### Online Resources
-- Investopedia.com
-- Yahoo Finance
-- TradingView
+See [README_DEPLOYMENT.md](README_DEPLOYMENT.md) for detailed instructions.
 
 ---
 
-## 🎉 Ready to Start?
+## 📖 Documentation
 
-### 3 Simple Steps:
-1. **Install:** `pip install -r requirements_unified.txt`
-2. **Launch:** `python launch_unified_app.py`
-3. **Learn:** Start with "📖 Basics" module!
+### Quick Start Guides
 
----
+- **START_HERE.md** - Your entry point
+- **QUICK_START_UNIFIED.md** - 30-second setup
+- **FOR_YOUR_SON.md** - Kid-friendly guide
 
-## 💪 You've Got This!
+### Comprehensive Guides
 
-Remember:
-- Start simple
-- Practice daily (15-30 min)
-- Ask questions
-- Make mistakes (safely!)
-- Have fun learning!
+- **UNIFIED_APP_GUIDE.md** - Complete feature guide
+- **VIDEO_TUTORIAL_SCRIPT.md** - Video production guide
+- **README_DEPLOYMENT.md** - Deployment instructions
 
-**Every expert was once a beginner. You're taking the first step!**
+### In-App Documentation
 
----
-
-## 📞 Contact
-
-**Questions?** Ask Dad!
-
-**Found a bug?** Let Dad know!
-
-**Want a new feature?** Tell Dad!
+- **User Manual** - Click "📖 User Manual" in sidebar
+- **Video Tutorials** - Click "🎥 Video Tutorials" in sidebar
 
 ---
 
-## ⚠️ Important Disclaimer
+## 🎓 What You'll Learn
 
-This is for **educational purposes only**.
+### Knowledge Gained
 
-- ✅ Use virtual money to learn
-- ✅ Practice strategies safely
-- ✅ Understand concepts
-- ❌ Not financial advice
-- ❌ Not a recommendation to trade
-- ❌ Always consult professionals before investing real money
+- Stock market fundamentals
+- Technical analysis
+- Risk management
+- Portfolio theory
+- Investment strategies
+- Performance metrics
 
----
+### Skills Developed
 
-## 🏆 Your Goals
-
-### Short-term (This Week)
-- [ ] Understand what stocks are
-- [ ] Read basic charts
-- [ ] Build first strategy
-- [ ] Make first virtual trade
-
-### Medium-term (This Month)
-- [ ] Master technical analysis
-- [ ] Test multiple strategies
-- [ ] Manage virtual portfolio
-- [ ] Pass all quizzes
-
-### Long-term (This Year)
-- [ ] Understand market cycles
-- [ ] Develop your own strategies
-- [ ] Make consistent virtual profits
-- [ ] Be ready for real investing (when older!)
+- Chart reading
+- Data analysis
+- Strategic thinking
+- Decision making
+- Risk assessment
+- Portfolio management
 
 ---
 
-**🌟 Happy Learning! Dad is proud of you! 🌟**
+## 🎯 Use Cases
+
+### For Students
+
+- Learn investment basics
+- Practice trading safely
+- Build confidence
+- Develop strategies
+
+### For Parents
+
+- Teach financial literacy
+- Monitor progress
+- Safe learning environment
+- No real money risk
+
+### For Educators
+
+- Classroom demonstrations
+- Interactive lessons
+- Real-world examples
+- Hands-on practice
 
 ---
 
-## 🔗 Quick Links
+## 🔧 Technical Details
 
-- 🚀 [Quick Start](#-how-to-start-3-steps)
-- 📚 [What You'll Learn](#-what-youll-learn-9-modules)
-- 🎮 [First Session Guide](#-your-first-session-30-minutes)
-- 💡 [Learning Path](#-learning-path-4-weeks)
-- 🤔 [FAQ](#-common-questions)
-- 🔧 [Troubleshooting](#-troubleshooting)
+### Built With
+
+- **Streamlit** - Web interface
+- **Plotly** - Interactive charts
+- **yfinance** - Market data
+- **Pandas** - Data processing
+- **NumPy** - Calculations
+- **Scikit-learn** - ML utilities
+
+### Architecture
+
+```
+unified_investment_app.py (Main App)
+├── 11 Interactive Modules
+├── Real-time Data Integration
+├── Virtual Portfolio System
+├── Strategy Backtesting Engine
+├── Portfolio Optimization
+└── Interactive Documentation
+```
+
+### Performance
+
+- Fast data loading
+- Real-time updates
+- Responsive interface
+- Efficient caching
+- Optimized calculations
 
 ---
 
-**Last Updated:** 2026-02-24  
-**Version:** 1.0 Enhanced  
-**Status:** ✅ Ready to Use
+## 🎨 Screenshots
 
-**Built with ❤️ by Dad**
+### Home Page
+![Home](https://via.placeholder.com/800x400?text=Home+Page)
+
+### Market Analysis
+![Market Analysis](https://via.placeholder.com/800x400?text=Market+Analysis)
+
+### Strategy Builder
+![Strategy Builder](https://via.placeholder.com/800x400?text=Strategy+Builder)
+
+### Portfolio Simulator
+![Portfolio](https://via.placeholder.com/800x400?text=Portfolio+Simulator)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+### Integrated Frameworks
+
+- **FinRL** - Financial Reinforcement Learning
+- **Backtesting.py** - Fast backtesting framework
+- **Lumibot** - Trading bot framework
+- **VectorBT** - Vectorized backtesting
+
+### Data Sources
+
+- **Yahoo Finance** - Real-time market data
+
+---
+
+## 📞 Support
+
+### Getting Help
+
+1. Check in-app **User Manual** (Module 10)
+2. Review **Video Tutorials** (Module 11)
+3. Read documentation files
+4. Open an issue on GitHub
+
+### Common Questions
+
+**Q: Is this real money?**  
+A: No! All trading is with virtual money ($100,000). Zero risk.
+
+**Q: Can I lose real money?**  
+A: No! This is a simulation for learning only.
+
+**Q: What stocks can I analyze?**  
+A: Any stock with a valid ticker (AAPL, MSFT, GOOGL, etc.)
+
+**Q: Is the data real?**  
+A: Yes! We use real market data from Yahoo Finance.
+
+**Q: Can I deploy this?**  
+A: Yes! See README_DEPLOYMENT.md for instructions.
+
+---
+
+## 🎯 Roadmap
+
+### Current Version (v1.0)
+
+- ✅ 11 interactive modules
+- ✅ Real market data
+- ✅ Virtual trading
+- ✅ Strategy backtesting
+- ✅ Portfolio optimization
+- ✅ Complete documentation
+
+### Future Enhancements
+
+- [ ] More strategy templates
+- [ ] Advanced indicators (Stochastic, Ichimoku)
+- [ ] Options trading module
+- [ ] Cryptocurrency integration
+- [ ] Social features (share strategies)
+- [ ] Progress tracking dashboard
+- [ ] Achievements system
+- [ ] Mobile app version
+
+---
+
+## 📊 Statistics
+
+- **Lines of Code:** 1000+
+- **Modules:** 11
+- **Features:** 50+
+- **Documentation Pages:** 15+
+- **Video Scripts:** 8
+
+---
+
+## ⚠️ Disclaimer
+
+**This application is for educational purposes only.**
+
+- Not financial advice
+- Not a recommendation to trade
+- Past performance doesn't guarantee future results
+- Always consult professionals before investing real money
+- Use virtual money only for learning
+
+---
+
+## 🌟 Star History
+
+If you find this project helpful, please consider giving it a star! ⭐
+
+---
+
+## 📧 Contact
+
+For questions or feedback, please open an issue on GitHub.
+
+---
+
+**🎓 Start your investment learning journey today!**
+
+**Built with ❤️ to help people understand stock investment**
+
+**From 4 complex frameworks → 1 unified educational platform**
+
+---
+
+## 🔗 Links
+
+- [Live Demo](https://your-app.streamlit.app) (Deploy to get URL)
+- [Documentation](./START_HERE.md)
+- [Deployment Guide](./README_DEPLOYMENT.md)
+- [Video Tutorial Script](./VIDEO_TUTORIAL_SCRIPT.md)
+
+---
+
+**Made with Streamlit** | **Powered by Python** | **Data from Yahoo Finance**

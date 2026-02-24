@@ -1,26 +1,49 @@
+# Python
+__pycache__/
 *.py[cod]
-*.html
-*.png
-_version.py
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-*.egg-info
-.eggs/*
-__pycache__/*
-dist/*
-
-.coverage
-.coverage.*
-htmlcov/*
-
-doc/build/*
-build/*
-
-.idea/*
-.vscode/
-
-**/.ipynb_checkpoints
-*~*
-
+# Virtual Environment
+venv/
+ENV/
+env/
 .venv/
-venv/
-venv/
+.venv_deploy/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Temporary files
+temp_models/
+*.tmp
