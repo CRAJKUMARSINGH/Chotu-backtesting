@@ -1,8 +1,0 @@
-# Web deployment requirements for Backtesting.py Streamlit app
-numpy>=1.26.0
-pandas>=2.0.0
-bokeh>=3.0.0
-streamlit>=1.28.0
-plotly>=5.17.0
-python-dateutil>=2.8.0
-psutil>=5.9.0
